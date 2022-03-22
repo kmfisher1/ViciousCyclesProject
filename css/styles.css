@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222629;
+    width: 100%;
+}
+body {
+    background-color: #474B4F;
+    color: #FAF5EF;
+}
+main {
+    width: 100%;
+    margin-bottom: 0px;
+}
+.content {
+    display: block;
+    background-color: #6B6E70;
+    width:50%;
+    margin: 5px auto;
+    margin-bottom: 0px;
+}
+aside {
+    width: 100%;
+    background-color: #222629;
+    border-top: 1px solid black;
+}
+footer {
+    background-color: #222629;
+}
+.hero {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+header img {
+    max-width: 80%;
+}
+main h1 {
+    color: #E9E7EE;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 3em;
+    font-weight: 900;
+    text-transform:uppercase;
+    text-shadow: 2px 2px BLACK;
+}
+aside h2 {
+    color: #E9E7EE;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform:uppercase;
+    text-shadow: 2px 2px BLACK;
+}
+p {
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+}
+
+/*Navigation Bar Section*/
+nav a {
+    text-decoration: none;
+    color: #291F15;
+}
+nav ul{                                   /*This section styles the unordered list which will become the menu*/
+        text-align: center;                    /*align text within menu to the center*/
+        list-style: none;                   /*get rid of the styling (i.e. bullets) in the list*/
+}
+nav ul li {                                 /*This section styles the list items (i.e. menu items) */
+    font: bold 12px/16px ; /*change the font size and type*/
+    font-family:'Libre Baskerville', serif;
+    color: eggshell;
+    display: inline-block;            /*display list items in one line (makes list horizontal)*/
+    position: relative;                /*Will allow submenus to move, letting them open immediately below the different menu items (i.e. a location on the screen relative to the menu item chosen) */
+    padding: 10px 20px;           /*Add padding around the text*/
+    background:  #6B6E70;              /*Change background color of the menu items*/
+    cursor: pointer;                  /*Change the mouse cursor to a pointer even if the text is not a link (useful for dropdown menus)*/
+    border: 1px solid black;
+}
+nav ul li:hover {                        /*This section styles the menu items when hovered (rolled) over*/
+    background: #555;             /*Change the background color of list item when hovered over*/
+    color:  #D1E8E2;                        /*Change the color of the text when hovered over*/
+}
+nav ul li ul {                            /*This section styles the unordered list which will become the submenu*/
+    padding: 0;                       /*Get rid of any default padding*/
+    position: absolute;             /*Works in conjunction with the earlier relative positioning code. Distinguishes submenu items from menu items and forces submenus to open in the same position for each menu item (i.e. an absolute position immediately below the menu item)*/
+    top: 45px;                        /*Add a little space between the menu and submenu*/
+    left: -10000px;                 /*Sets submenu way offscreen on the left side so it's hidden from view*/
+    width: 125px;                  /*Set the width for the submenu*/
+}
+nav ul li ul li {                        /*This section styles nested list items (i.e. submenu items) */
+    background: #555;               /*Set background color for submenu items*/
+    font-size: 12px;                /*This makes the font size of submenu items a tad bit smaller than menu items to denote position as a sub item*/
+    display: block;                 /*Display the submenu items as a block - literally displays all submenu items in one large rectangle.*/
+    color: #D1E8E2;                     /*Set submenu text color*/
+}
+nav ul li ul li a{
+    color: #D1E8E2;
+}
+nav ul li ul li:hover { 
+    background: #2C3531; 
+} /*Change submenu item's background color when hovered over*/
+nav ul li:hover ul {                 /*This section styles the submenu when a menu item it hovered over*/
+    display: block;                /*Display submenu as a block when the menu item is hovered over*/
+    left :0px;                        /*Moves submenu from way offscreen to its proper location on screen when the menu item is hovered over*/
+}
+
